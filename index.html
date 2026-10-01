@@ -73,7 +73,7 @@
     .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
 
     /* ── BRAND LOGO (mark + lowercase serif wordmark, per brand guide) ── */
-    .logo { display: block; height: 52px; width: auto; }
+    .logo { display: block; height: 64px; width: auto; }
 
     nav.site-nav { display: flex; }
     nav.site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: clamp(4px, 1.2vw, 18px); align-items: center; }
@@ -269,7 +269,7 @@
     .status.err { color: var(--brand-rust); }
 
     /* ── FOOTER ── */
-    .site-footer { background: var(--brand-green); --muted: rgba(238,229,208,.78); --ink: var(--brand-cream); --accent: var(--brand-gold); --line: rgba(238,229,208,.18); color: var(--muted); padding: 48px 0 36px; border-top: 1px solid var(--line); margin-top: 80px; font-size: .88rem; }
+    .site-footer { background: var(--brand-cream); color: var(--muted); padding: 48px 0 36px; border-top: 1px solid var(--line); margin-top: 80px; font-size: .88rem; }
     .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--line); }
     .footer-brand { margin-bottom: .9rem; }
     .footer-tagline { font-size: .7rem; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; }
@@ -277,7 +277,7 @@
     .footer-links a { color: var(--muted); transition: color .15s; }
     .footer-links a:hover { color: var(--accent); }
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .footer-copy { font-size: .76rem; color: rgba(238,229,208,.6); }
+    .footer-copy { font-size: .76rem; color: var(--muted); }
 
     /* ── SCROLL REVEAL ── */
     .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
@@ -299,7 +299,7 @@
   <header class="site-header" id="siteHeader">
     <div class="inner">
       <a href="#top" class="brand" aria-label="Aqua Design Collective home">
-        <img class="logo" src="assets/adc-logo.png" alt="aqua design collective" width="500" height="240">
+        <img class="logo" src="assets/adc-logo.png" alt="aqua design collective — nature aquariums" width="1715" height="690">
       </a>
       <nav class="site-nav" aria-label="Main">
         <ul>
@@ -318,7 +318,7 @@
 
   <aside id="mobileDrawer" class="drawer" aria-hidden="true" role="dialog" aria-modal="true">
     <header>
-      <img class="logo" src="assets/adc-logo.png" alt="aqua design collective" width="500" height="240">
+      <img class="logo" src="assets/adc-logo.png" alt="aqua design collective — nature aquariums" width="1715" height="690">
       <button id="closeDrawer" class="menu-toggle" aria-label="Close menu">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
@@ -522,7 +522,7 @@
     <div class="container">
       <div class="footer-top">
         <div>
-          <div class="footer-brand"><img class="logo" src="assets/adc-logo-light.png" alt="aqua design collective" width="500" height="240"></div>
+          <div class="footer-brand"><img class="logo" src="assets/adc-logo.png" alt="aqua design collective — nature aquariums" width="1715" height="690"></div>
           <div class="footer-tagline">Nature Aquariums · Design · Rentals · Care</div>
         </div>
         <nav class="footer-links" aria-label="Footer">
