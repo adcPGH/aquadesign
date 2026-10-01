@@ -7,21 +7,30 @@
 
   <meta name="description" content="Browse aquascape rental tanks by size and style. Aqua Design Collective gallery." />
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
   <style>
     :root {
-      --bg-main: #0e1114;
-      --bg-card: #151a1f;
-      --text-primary: #f5f7fa;
-      --text-muted: #a0a6ad;
-      --accent: #4fd1c5;
-      --border-subtle: rgba(255,255,255,0.08);
+      --brand-green: #3e4929;
+      --brand-rust:  #964c22;
+      --brand-cream: #eee5d0;
+      --brand-black: #2b2b2b;
+      --brand-gold:  #caab64;
+      --brand-sage:  #9eaf93;
+      --brand-teal:  #2c575d;
+      --bg-main: #ffffff;
+      --bg-card: var(--brand-cream);
+      --text-primary: var(--brand-black);
+      --text-muted: rgba(43,43,43,.72);
+      --accent: var(--brand-green);
+      --border-subtle: rgba(43,43,43,.14);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Noto Sans', Arial, sans-serif;
       background: var(--bg-main);
       color: var(--text-primary);
       line-height: 1.6;
@@ -52,12 +61,12 @@
     .btn {
       display: inline-block;
       padding: 0.9rem 1.6rem;
-      border-radius: 6px;
+      border-radius: 4px;
       font-weight: 600;
       transition: 0.2s ease;
       border: 1px solid transparent;
     }
-    .btn-primary { background: var(--accent); color: #000; }
+    .btn-primary { background: var(--accent); color: var(--brand-cream); }
     .btn-primary:hover { opacity: 0.85; }
     .btn-secondary {
       border-color: var(--border-subtle);
@@ -68,9 +77,7 @@
     /* Hero band */
     .page-hero {
       padding: 5rem 0 1rem;
-      background:
-        linear-gradient(to bottom, rgba(14,17,20,0.85), rgba(14,17,20,0.95)),
-        url("images/hero.jpg") center / cover no-repeat;
+      background: var(--brand-cream);
       border-bottom: 1px solid var(--border-subtle);
     }
     .page-hero h1 {
@@ -115,9 +122,9 @@
     }
     .chip:hover { color: var(--text-primary); }
     .chip.active {
-      border-color: rgba(79,209,197,0.55);
+      border-color: rgba(62,73,41,0.55);
       color: var(--text-primary);
-      box-shadow: 0 0 0 2px rgba(79,209,197,0.12) inset;
+      box-shadow: 0 0 0 2px rgba(62,73,41,0.12) inset;
     }
 
     /* Gallery grid */
@@ -143,7 +150,7 @@
       width: 100%;
       aspect-ratio: 4 / 3;
       overflow: hidden;
-      background: #0b0e11;
+      background: #ffffff;
     }
     .tile img {
       width: 100%;
@@ -172,14 +179,14 @@
       border: 1px dashed var(--border-subtle);
       border-radius: 12px;
       color: var(--text-muted);
-      background: rgba(255,255,255,0.02);
+      background: rgba(43,43,43,.14);
     }
 
     /* Lightbox modal */
     .modal {
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.75);
+      background: rgba(43,43,43,.85);
       display: none;
       align-items: center;
       justify-content: center;
@@ -190,14 +197,14 @@
 
     .modal-card {
       width: min(1100px, 96vw);
-      background: #0b0e11;
-      border: 1px solid rgba(255,255,255,0.10);
+      background: #ffffff;
+      border: 1px solid rgba(43,43,43,.14);
       border-radius: 14px;
       overflow: hidden;
     }
     .modal-imgwrap {
       width: 100%;
-      background: #000;
+      background: #2b2b2b;
     }
     .modal-imgwrap img {
       width: 100%;
@@ -206,8 +213,8 @@
     }
     .modal-meta {
       padding: 1.25rem 1.5rem 1.5rem;
-      background: rgba(255,255,255,0.02);
-      border-top: 1px solid rgba(255,255,255,0.08);
+      background: rgba(43,43,43,.14);
+      border-top: 1px solid rgba(43,43,43,.14);
       display: flex;
       gap: 1rem;
       justify-content: space-between;
@@ -225,14 +232,14 @@
 
     .icon-btn {
       background: transparent;
-      border: 1px solid rgba(255,255,255,0.18);
+      border: 1px solid rgba(43,43,43,.14);
       color: var(--text-primary);
       padding: 0.65rem 0.9rem;
       border-radius: 10px;
       font-weight: 700;
       cursor: pointer;
     }
-    .icon-btn:hover { border-color: rgba(79,209,197,0.55); }
+    .icon-btn:hover { border-color: rgba(62,73,41,0.55); }
 
     footer {
       padding: 2rem;
@@ -241,13 +248,21 @@
       text-align: center;
       font-size: 0.9rem;
     }
+
+    /* ── BRAND LOGO (mark + lowercase serif wordmark, per brand guide) ── */
+    .logo { display: block; height: 52px; width: auto; }
+    h1, section h2, .cta h2 { font-family: 'Hina Mincho', Georgia, serif; font-weight: 400; color: var(--brand-green); }
+    .cta h2 { color: var(--brand-cream); }
+    .cta .btn-primary { background: var(--brand-cream); color: var(--brand-green); }
+    header nav a { color: var(--brand-black) !important; font-weight: 700 !important; }
+    header nav a:hover { color: var(--brand-green) !important; }
   </style>
 </head>
 
 <body>
 
   <header>
-    <strong>Aqua Design Collective</strong>
+    <a href="index.html" aria-label="Aqua Design Collective home"><img class="logo" src="assets/adc-logo.png" alt="aqua design collective" width="500" height="240"></a>
     <nav>
       <a href="index.html">Home</a>
       <a href="rentals.html">Rentals</a>
@@ -263,7 +278,7 @@
       <p>
         Browse completed aquascapes by size and style. Each scape can be replicated as a rental or adapted as a custom build.
       </p>
-      <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+      <a class="btn btn-primary" href="contact.html">Request a Studio Tour</a>
       <a class="btn btn-secondary" href="rentals.html" style="margin-left:0.75rem;">View Rentals</a>
 
       <div class="filters" aria-label="Filters">
@@ -316,7 +331,7 @@
   </div>
 
   <footer>
-    © <span id="year"></span> Aqua Design Collective · Aquascape Rentals & Design
+    © <span id="year"></span> Aqua Design Collective · Nature Aquariums
   </footer>
 
   <script>

@@ -7,21 +7,30 @@
 
   <meta name="description" content="Aqua Design Collective clients and spaces: office, hospitality, and residential aquascape rentals and custom installs." />
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
   <style>
     :root {
-      --bg-main: #0e1114;
-      --bg-card: #151a1f;
-      --text-primary: #f5f7fa;
-      --text-muted: #a0a6ad;
-      --accent: #4fd1c5;
-      --border-subtle: rgba(255,255,255,0.08);
+      --brand-green: #3e4929;
+      --brand-rust:  #964c22;
+      --brand-cream: #eee5d0;
+      --brand-black: #2b2b2b;
+      --brand-gold:  #caab64;
+      --brand-sage:  #9eaf93;
+      --brand-teal:  #2c575d;
+      --bg-main: #ffffff;
+      --bg-card: var(--brand-cream);
+      --text-primary: var(--brand-black);
+      --text-muted: rgba(43,43,43,.72);
+      --accent: var(--brand-green);
+      --border-subtle: rgba(43,43,43,.14);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Noto Sans', Arial, sans-serif;
       background: var(--bg-main);
       color: var(--text-primary);
       line-height: 1.6;
@@ -52,12 +61,12 @@
     .btn {
       display: inline-block;
       padding: 0.9rem 1.6rem;
-      border-radius: 6px;
+      border-radius: 4px;
       font-weight: 600;
       transition: 0.2s ease;
       border: 1px solid transparent;
     }
-    .btn-primary { background: var(--accent); color: #000; }
+    .btn-primary { background: var(--accent); color: var(--brand-cream); }
     .btn-primary:hover { opacity: 0.85; }
     .btn-secondary {
       border-color: var(--border-subtle);
@@ -68,9 +77,7 @@
     /* Hero band */
     .page-hero {
       padding: 5rem 0 1rem;
-      background:
-        linear-gradient(to bottom, rgba(14,17,20,0.85), rgba(14,17,20,0.95)),
-        url("images/hero.jpg") center / cover no-repeat;
+      background: var(--brand-cream);
       border-bottom: 1px solid var(--border-subtle);
     }
     .page-hero h1 {
@@ -127,7 +134,7 @@
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 10;
-      background: #0b0e11;
+      background: #ffffff;
       border-bottom: 1px solid var(--border-subtle);
     }
     .case-media img {
@@ -139,7 +146,7 @@
     }
     .case-body { padding: 1.5rem 1.75rem 1.75rem; }
     .case-title {
-      font-weight: 800;
+      font-weight: 700;
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
     }
@@ -170,7 +177,7 @@
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
       padding: 1.25rem;
-      background: rgba(255,255,255,0.02);
+      background: rgba(43,43,43,.14);
       color: var(--text-muted);
       text-align: center;
       font-weight: 700;
@@ -194,16 +201,18 @@
 
     /* CTA (index-style) */
     .cta {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background: var(--brand-green);
+      color: var(--brand-cream);
+      --accent: var(--brand-cream);
       border-radius: 14px;
       padding: 4rem 2rem;
       text-align: center;
-      border: 1px solid rgba(255,255,255,0.06);
+      border: 1px solid rgba(43,43,43,.14);
     }
     .cta h2 { margin-bottom: 1rem; }
     .cta p {
       margin-bottom: 2rem;
-      color: #e5e7eb;
+      color: rgba(238,229,208,.85);
       max-width: 840px;
       margin-left: auto;
       margin-right: auto;
@@ -216,13 +225,21 @@
       text-align: center;
       font-size: 0.9rem;
     }
+
+    /* ── BRAND LOGO (mark + lowercase serif wordmark, per brand guide) ── */
+    .logo { display: block; height: 52px; width: auto; }
+    h1, section h2, .cta h2 { font-family: 'Hina Mincho', Georgia, serif; font-weight: 400; color: var(--brand-green); }
+    .cta h2 { color: var(--brand-cream); }
+    .cta .btn-primary { background: var(--brand-cream); color: var(--brand-green); }
+    header nav a { color: var(--brand-black) !important; font-weight: 700 !important; }
+    header nav a:hover { color: var(--brand-green) !important; }
   </style>
 </head>
 
 <body>
 
   <header>
-    <strong>Aqua Design Collective</strong>
+    <a href="index.html" aria-label="Aqua Design Collective home"><img class="logo" src="assets/adc-logo.png" alt="aqua design collective" width="500" height="240"></a>
     <nav>
       <a href="index.html">Home</a>
       <a href="rentals.html">Rentals</a>
@@ -239,7 +256,7 @@
         We design living aquascapes that hold up in real environments—busy lobbies, quiet offices, and modern homes.
         Rentals and custom installs are supported with care plans to keep the tank consistently pristine.
       </p>
-      <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+      <a class="btn btn-primary" href="contact.html">Request a Studio Tour</a>
       <a class="btn btn-secondary" href="gallery.html" style="margin-left:0.75rem;">View Gallery</a>
     </div>
   </section>
@@ -366,13 +383,13 @@
           Share your location, space type, and a quick photo of the placement area.
           We’ll recommend the right size and service package.
         </p>
-        <a class="btn btn-primary" href="contact.html">Request a Quote</a>
+        <a class="btn btn-primary" href="contact.html">Request a Studio Tour</a>
       </div>
     </section>
   </main>
 
   <footer>
-    © <span id="year"></span> Aqua Design Collective · Aquascape Rentals & Design
+    © <span id="year"></span> Aqua Design Collective · Nature Aquariums
   </footer>
 
   <script>

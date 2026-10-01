@@ -5,28 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin Login | Aqua Design Collective</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/ADC Logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <style>
     :root {
-      --ink: #0b1f2a;
-      --reef: #2aa6a0;
-      --paper: #0f1114;
+      --ink: #2b2b2b;
+      --reef: #9eaf93;
+      --paper: #2b2b2b;
       --radius: 16px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: "Bricolage Grotesque", system-ui, sans-serif;
+      font-family: 'Noto Sans', system-ui, sans-serif;
       background: var(--paper);
-      color: rgba(255,255,255,.92);
+      color: rgba(238,229,208,.92);
       min-height: 100vh;
       display: grid;
       place-items: center;
       padding: 1.5rem;
     }
     .card {
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(238,229,208,.05);
+      border: 1px solid rgba(238,229,208,.12);
       border-radius: calc(var(--radius) + 8px);
       padding: 2.5rem 2rem;
       width: 100%;
@@ -55,7 +56,7 @@
       margin-bottom: .4rem;
     }
     .sub {
-      color: rgba(255,255,255,.60);
+      color: rgba(238,229,208,.60);
       margin-bottom: 1.8rem;
       font-size: .95rem;
     }
@@ -63,13 +64,13 @@
       display: block;
       font-weight: 700;
       margin-bottom: .5rem;
-      color: rgba(255,255,255,.88);
+      color: rgba(238,229,208,.88);
     }
     input {
       width: 100%;
       background: rgba(0,0,0,.28);
-      border: 1px solid rgba(255,255,255,.16);
-      color: rgba(255,255,255,.94);
+      border: 1px solid rgba(238,229,208,.16);
+      color: rgba(238,229,208,.94);
       border-radius: 12px;
       padding: .9rem 1rem;
       font: inherit;
@@ -77,12 +78,12 @@
       outline: none;
       transition: border-color .15s;
     }
-    input:focus { border-color: rgba(42,166,160,.70); }
+    input:focus { border-color: rgba(158,175,147,.70); }
     .btn {
       width: 100%;
       padding: .92rem;
       background: var(--reef);
-      color: #062022;
+      color: #2b2b2b;
       font: inherit;
       font-weight: 700;
       border: none;
@@ -90,11 +91,11 @@
       cursor: pointer;
       transition: background .15s, transform .1s;
     }
-    .btn:hover { background: #2bb7b0; }
+    .btn:hover { background: #eee5d0; }
     .btn:active { transform: translateY(1px); }
     .error {
       display: none;
-      color: rgba(255,140,140,.9);
+      color: rgba(202,171,100,.9);
       font-size: .9rem;
       margin-top: .9rem;
       font-weight: 600;
@@ -104,11 +105,11 @@
       display: block;
       text-align: center;
       margin-top: 1.2rem;
-      color: rgba(255,255,255,.50);
+      color: rgba(238,229,208,.50);
       font-size: .9rem;
       text-decoration: none;
     }
-    .back:hover { color: rgba(255,255,255,.80); }
+    .back:hover { color: rgba(238,229,208,.80); }
   </style>
 </head>
 <body>

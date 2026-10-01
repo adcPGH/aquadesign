@@ -5,19 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin Dashboard | Aqua Design Collective</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/ADC Logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <style>
     :root {
-      --reef: #2aa6a0;
-      --paper: #0f1114;
+      --reef: #9eaf93;
+      --paper: #2b2b2b;
       --radius: 16px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: "Bricolage Grotesque", system-ui, sans-serif;
+      font-family: 'Noto Sans', system-ui, sans-serif;
       background: var(--paper);
-      color: rgba(255,255,255,.92);
+      color: rgba(238,229,208,.92);
       min-height: 100vh;
       padding: 2rem 1.5rem 4rem;
     }
@@ -29,7 +30,7 @@
       align-items: center;
       justify-content: space-between;
       padding-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(255,255,255,.10);
+      border-bottom: 1px solid rgba(238,229,208,.10);
       margin-bottom: 2rem;
       gap: 1rem;
       flex-wrap: wrap;
@@ -50,38 +51,38 @@
       transition: background .14s, transform .1s;
     }
     .btn:active { transform: translateY(1px); }
-    .btn-cta { background: var(--reef); color: #062022; border: none; }
-    .btn-cta:hover { background: #2bb7b0; }
-    .btn-ghost { background: transparent; border-color: rgba(255,255,255,.18); color: rgba(255,255,255,.80); }
-    .btn-ghost:hover { background: rgba(255,255,255,.06); }
-    .btn-danger { background: transparent; border-color: rgba(255,100,100,.30); color: rgba(255,140,140,.85); }
-    .btn-danger:hover { background: rgba(255,100,100,.08); }
+    .btn-cta { background: var(--reef); color: #2b2b2b; border: none; }
+    .btn-cta:hover { background: #eee5d0; }
+    .btn-ghost { background: transparent; border-color: rgba(238,229,208,.18); color: rgba(238,229,208,.80); }
+    .btn-ghost:hover { background: rgba(238,229,208,.06); }
+    .btn-danger { background: transparent; border-color: rgba(202,171,100,.30); color: rgba(202,171,100,.85); }
+    .btn-danger:hover { background: rgba(202,171,100,.08); }
 
     h1 { font-size: 1.75rem; letter-spacing: -.01em; margin-bottom: .3rem; }
-    .sub { color: rgba(255,255,255,.58); margin-bottom: 2rem; }
+    .sub { color: rgba(238,229,208,.58); margin-bottom: 2rem; }
 
     /* Upload zone */
     .upload-zone {
-      border: 2px dashed rgba(42,166,160,.40);
+      border: 2px dashed rgba(158,175,147,.40);
       border-radius: var(--radius);
       padding: 2.5rem 2rem;
       text-align: center;
       cursor: pointer;
       transition: border-color .15s, background .15s;
       margin-bottom: 2rem;
-      background: rgba(42,166,160,.04);
+      background: rgba(158,175,147,.04);
     }
-    .upload-zone:hover, .upload-zone.drag { border-color: var(--reef); background: rgba(42,166,160,.08); }
+    .upload-zone:hover, .upload-zone.drag { border-color: var(--reef); background: rgba(158,175,147,.08); }
     .upload-zone .icon { font-size: 2.4rem; margin-bottom: .6rem; }
-    .upload-zone p { color: rgba(255,255,255,.65); margin-top: .4rem; font-size: .95rem; }
-    .upload-zone strong { color: rgba(255,255,255,.90); }
+    .upload-zone p { color: rgba(238,229,208,.65); margin-top: .4rem; font-size: .95rem; }
+    .upload-zone strong { color: rgba(238,229,208,.90); }
     #fileInput { display: none; }
 
     /* Progress */
     .progress-wrap { display: none; margin-bottom: 1.5rem; }
     .progress-wrap.show { display: block; }
     .progress-bar-bg {
-      background: rgba(255,255,255,.10);
+      background: rgba(238,229,208,.10);
       border-radius: 999px;
       height: 8px;
       overflow: hidden;
@@ -94,7 +95,7 @@
       width: 0%;
       transition: width .2s;
     }
-    .progress-label { font-size: .88rem; color: rgba(255,255,255,.60); font-weight: 600; }
+    .progress-label { font-size: .88rem; color: rgba(238,229,208,.60); font-weight: 600; }
 
     /* Gallery grid */
     .section-head {
@@ -104,7 +105,7 @@
       margin-bottom: 1.1rem;
     }
     .section-head h2 { font-size: 1.2rem; font-weight: 750; }
-    .count { color: rgba(255,255,255,.48); font-size: .92rem; }
+    .count { color: rgba(238,229,208,.48); font-size: .92rem; }
 
     .gallery {
       display: grid;
@@ -116,8 +117,8 @@
       border-radius: var(--radius);
       overflow: hidden;
       aspect-ratio: 4/3;
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(238,229,208,.05);
+      border: 1px solid rgba(238,229,208,.10);
     }
     .photo-card img {
       width: 100%;
@@ -140,7 +141,7 @@
     .photo-card:hover .overlay { opacity: 1; }
 
     .empty {
-      color: rgba(255,255,255,.38);
+      color: rgba(238,229,208,.38);
       text-align: center;
       padding: 3rem 0;
       font-size: .98rem;
@@ -151,9 +152,9 @@
       bottom: 1.5rem;
       left: 50%;
       transform: translateX(-50%) translateY(80px);
-      background: rgba(30,40,50,.95);
-      border: 1px solid rgba(255,255,255,.14);
-      color: rgba(255,255,255,.90);
+      background: rgba(43,43,43,.97);
+      border: 1px solid rgba(238,229,208,.14);
+      color: rgba(238,229,208,.90);
       padding: .75rem 1.4rem;
       border-radius: 999px;
       font-weight: 700;
@@ -163,10 +164,10 @@
       white-space: nowrap;
     }
     .toast.show { transform: translateX(-50%) translateY(0); }
-    .toast.ok { border-color: rgba(42,166,160,.50); color: rgba(42,166,160,.95); }
-    .toast.err { border-color: rgba(255,140,140,.40); color: rgba(255,140,140,.90); }
+    .toast.ok { border-color: rgba(158,175,147,.50); color: rgba(158,175,147,.95); }
+    .toast.err { border-color: rgba(202,171,100,.40); color: rgba(202,171,100,.90); }
 
-    #loading { text-align: center; padding: 3rem 0; color: rgba(255,255,255,.38); }
+    #loading { text-align: center; padding: 3rem 0; color: rgba(238,229,208,.38); }
   </style>
 </head>
 <body>

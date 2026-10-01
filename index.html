@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aqua Design Collective | Aquascape Design</title>
+  <title>Aqua Design Collective | Nature Aquariums</title>
   <meta name="description" content="Aqua Design Collective offers premium aquascape rentals, custom aquarium design, and maintenance for offices, hospitality, and modern homes." />
   <meta name="keywords" content="aquascape rentals, aquarium design, planted tanks, aquarium maintenance, Pittsburgh" />
   <meta property="og:title" content="Aqua Design Collective" />
@@ -12,72 +12,79 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/ADC Logo.png">
-  <link rel="apple-touch-icon" href="assets/ADC Logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
   <style>
     :root {
-      --accent:    #2ab4a5;
-      --ink:       rgba(255,255,255,.90);
-      --muted:     #7aaaa4;
-      --bg:        #080f14;
-      --panel:     #0f1c24;
-      --panel-2:   #0b1820;
-      --line:      rgba(255,255,255,.08);
-      --cta:       #2ab4a5;
-      --cta-ink:   #030d0c;
+      /* Brand palette — primary */
+      --brand-green: #3e4929;
+      --brand-rust:  #964c22;
+      --brand-cream: #eee5d0;
+      --brand-black: #2b2b2b;
+      /* Brand palette — secondary */
+      --brand-gold:  #caab64;
+      --brand-sage:  #9eaf93;
+      --brand-teal:  #2c575d;
+      --serif:     'Hina Mincho', Georgia, serif;
+      --sans:      'Noto Sans', Arial, sans-serif;
+
+      --accent:    var(--brand-green);
+      --ink:       var(--brand-black);
+      --muted:     rgba(43,43,43,.72);
+      --bg:        #ffffff;
+      --panel:     var(--brand-cream);
+      --panel-2:   #e6dcc3;
+      --line:      rgba(43,43,43,.14);
+      --cta:       var(--brand-green);
+      --cta-ink:   var(--brand-cream);
       --container: min(1160px, 92vw);
-      --radius:    16px;
+      --radius:    6px;
     }
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; margin: 0; padding: 0; }
-    body { font-family: 'Montserrat', Arial, sans-serif; background: var(--bg); color: var(--ink); margin: 0; padding: 0; line-height: 1.55; overflow-x: hidden; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--ink); margin: 0; padding: 0; line-height: 1.55; overflow-x: hidden; }
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
     section { scroll-margin-top: 90px; }
     .container { width: var(--container); margin-inline: auto; }
 
     .eyebrow {
-      font-size: .67rem; font-weight: 700; letter-spacing: .24em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: .85rem;
+      font-family: var(--serif); font-size: .8rem; font-weight: 400; letter-spacing: .24em; text-transform: uppercase;
+      color: var(--ink); margin-bottom: .85rem;
       display: flex; align-items: center; gap: .6rem;
     }
-    .eyebrow::before { content: ''; display: block; width: 22px; height: 1.5px; background: var(--accent); flex-shrink: 0; }
+    .eyebrow::before { content: ''; display: block; width: 22px; height: 1.5px; background: var(--brand-rust); flex-shrink: 0; }
 
     /* ── HEADER ── */
     .site-header {
       position: fixed; inset-inline: 0; top: 0; z-index: 1000;
       display: flex; align-items: center; justify-content: center;
       padding: 12px clamp(16px, 4vw, 48px);
-      background: rgba(8,15,20,.90);
+      background: rgba(255,255,255,.92);
       backdrop-filter: saturate(140%) blur(12px);
       border-bottom: 1px solid var(--line);
       transition: padding .25s, background .2s;
     }
-    .site-header.scrolled { padding: 8px clamp(16px, 4vw, 48px); background: rgba(8,15,20,.97); }
+    .site-header.scrolled { padding: 8px clamp(16px, 4vw, 48px); background: rgba(255,255,255,.98); }
     .site-header .inner { width: var(--container); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 
     .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-    .brand-mark {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem; font-weight: 700; letter-spacing: .08em;
-      color: var(--accent); border: 1px solid rgba(42,180,165,.30);
-      padding: .28rem .6rem; border-radius: 6px; line-height: 1; flex-shrink: 0;
-    }
-    .brand-text { font-size: .88rem; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
-    @media (max-width: 540px) { .brand-text { display: none; } }
+
+    /* ── BRAND LOGO (mark + lowercase serif wordmark, per brand guide) ── */
+    .logo { display: block; height: 52px; width: auto; }
 
     nav.site-nav { display: flex; }
     nav.site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: clamp(4px, 1.2vw, 18px); align-items: center; }
     nav.site-nav a {
-      font-weight: 800; font-size: .74rem; letter-spacing: .05em; text-transform: uppercase;
-      padding: 7px 11px; border-radius: 999px; border: 1px solid transparent;
+      font-weight: 700; font-size: .84rem; letter-spacing: .01em;
+      padding: 7px 12px; border-radius: 4px; border: 1px solid transparent;
       transition: background .15s, color .15s; white-space: nowrap;
     }
     nav.site-nav a:hover, nav.site-nav a[aria-current="page"] { background: var(--accent); color: var(--cta-ink); }
     .nav-cta { background: var(--accent) !important; color: var(--cta-ink) !important; border-color: var(--accent) !important; }
-    .nav-cta:hover { background: #33c9b8 !important; }
+    .nav-cta:hover { background: var(--brand-black) !important; border-color: var(--brand-black) !important; }
 
     .menu-toggle {
       display: none; width: 44px; height: 44px;
@@ -106,27 +113,28 @@
     .drawer.open { transform: translateX(0); -webkit-transform: translateX(0); }
     .drawer header { display: flex; align-items: center; justify-content: space-between; padding: 16px; border-bottom: 1px solid var(--line); }
     .drawer nav ul { list-style: none; margin: 0; padding: 12px; display: flex; flex-direction: column; gap: 6px; }
-    .drawer nav a { padding: 12px 14px; border-radius: 10px; font-weight: 800; font-size: .85rem; letter-spacing: .05em; text-transform: uppercase; display: block; transition: background .15s; }
+    .drawer nav a { padding: 12px 14px; border-radius: 10px; font-weight: 700; font-size: .95rem; display: block; transition: background .15s; }
     .drawer nav a:hover { background: var(--panel-2); color: var(--accent); }
-    .nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.5); opacity: 0; pointer-events: none; transition: opacity .2s; z-index: 1000; }
+    .nav-overlay { position: fixed; inset: 0; background: rgba(43,43,43,.5); opacity: 0; pointer-events: none; transition: opacity .2s; z-index: 1000; }
     .nav-overlay.show { opacity: 1; pointer-events: auto; }
 
     /* ── BUTTONS ── */
     .btn {
-      background: var(--cta); color: var(--cta-ink); font-weight: 900;
-      padding: 11px 28px; border-radius: 999px; border: 2px solid transparent;
-      cursor: pointer; font-size: .88rem; font-family: inherit; letter-spacing: .05em;
-      text-transform: uppercase; display: inline-flex; align-items: center; gap: .45rem;
-      transition: transform .12s, box-shadow .12s; box-shadow: 0 6px 22px rgba(0,0,0,.35);
+      background: var(--cta); color: var(--cta-ink); font-weight: 700;
+      padding: 11px 26px; border-radius: 4px; border: 2px solid transparent;
+      cursor: pointer; font-size: .92rem; font-family: inherit; letter-spacing: .01em;
+      display: inline-flex; align-items: center; gap: .45rem;
+      transition: transform .12s, box-shadow .12s; box-shadow: none;
       text-decoration: none;
     }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(43,43,43,.18); }
     .btn:active { transform: translateY(0); }
-    .btn-ghost { background: transparent; color: var(--ink); border-color: rgba(255,255,255,.20); box-shadow: none; }
-    .btn-ghost:hover { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.38); }
+    .btn-ghost { background: transparent; color: var(--ink); border-color: currentColor; box-shadow: none; }
+    .btn-ghost:hover { background: rgba(62,73,41,.08); box-shadow: none; }
 
     /* ── HERO ── */
-    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; isolation: isolate; background: #060e14; }
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; isolation: isolate; background: var(--brand-green);
+      --accent: var(--brand-gold); --muted: rgba(238,229,208,.78); --ink: var(--brand-cream); --line: rgba(238,229,208,.16); --cta: var(--brand-cream); --cta-ink: var(--brand-green); color: var(--brand-cream); }
 
     .hero-bg {
       position: absolute; inset: 0; z-index: 0;
@@ -138,8 +146,7 @@
     .hero-overlay {
       position: absolute; inset: 0; z-index: 1; pointer-events: none;
       background:
-        radial-gradient(55% 55% at 110% -5%, rgba(42,180,165,.08) 0, transparent 60%),
-        linear-gradient(155deg, rgba(6,14,20,.90) 0%, rgba(8,18,28,.55) 48%, rgba(10,20,30,.72) 100%);
+        linear-gradient(155deg, rgba(43,43,43,.88) 0%, rgba(62,73,41,.55) 48%, rgba(43,43,43,.72) 100%);
     }
 
     .hero-inner {
@@ -150,24 +157,24 @@
     @media (max-width: 860px) { .hero-inner { grid-template-columns: 1fr; padding: 6.5rem 0 5.5rem; } .hero-right { display: none; } }
 
     .hero-left { opacity: 0; animation: fadeUp .75s .15s ease forwards; }
-    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 5vw, 4.2rem); line-height: 1.04; margin: 0 0 18px; color: #fff; }
-    .hero h1 em { font-style: italic; color: var(--accent); }
-    .hero-sub { font-size: 1rem; line-height: 1.78; color: rgba(255,255,255,.62); max-width: 430px; margin-bottom: 2.2rem; }
+    .hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.6rem, 5vw, 4.2rem); line-height: 1.08; margin: 0 0 18px; color: var(--brand-cream); }
+    .hero h1 em { font-style: normal; color: var(--accent); }
+    .hero-sub { font-size: 1rem; line-height: 1.78; color: rgba(238,229,208,.82); max-width: 430px; margin-bottom: 2.2rem; }
     .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 2.5rem; }
-    .hero-proof { padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.08); display: flex; align-items: center; gap: 1rem; }
+    .hero-proof { padding-top: 1.5rem; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 1rem; }
     .hero-stars { color: var(--accent); font-size: .95rem; letter-spacing: .06em; }
-    .hero-proof-text { font-size: .8rem; color: rgba(255,255,255,.48); line-height: 1.55; }
-    .hero-proof-text strong { color: rgba(255,255,255,.82); font-weight: 600; }
+    .hero-proof-text { font-size: .8rem; color: rgba(238,229,208,.7); line-height: 1.55; }
+    .hero-proof-text strong { color: var(--brand-cream); font-weight: 600; }
 
     .hero-right { display: flex; flex-direction: column; gap: 12px; align-items: flex-end; opacity: 0; animation: fadeUp .75s .45s ease forwards; }
-    .h-stat { background: rgba(42,180,165,.07); backdrop-filter: blur(16px); border: 1px solid rgba(42,180,165,.18); padding: 1.2rem 1.8rem; text-align: center; min-width: 158px; border-radius: 16px; }
-    .h-stat-num { font-family: 'Playfair Display', serif; font-size: 2.1rem; font-weight: 700; color: var(--accent); line-height: 1; }
+    .h-stat { background: rgba(43,43,43,.35); backdrop-filter: blur(16px); border: 1px solid rgba(238,229,208,.22); padding: 1.2rem 1.8rem; text-align: center; min-width: 158px; border-radius: var(--radius); }
+    .h-stat-num { font-family: var(--serif); font-size: 2.1rem; font-weight: 400; color: var(--accent); line-height: 1; }
     .h-stat-label { font-size: .63rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); margin-top: .35rem; }
 
-    .hero-stats { position: absolute; bottom: 0; left: 0; right: 0; z-index: 3; background: rgba(6,14,20,.85); backdrop-filter: blur(8px); border-top: 1px solid rgba(255,255,255,.06); }
+    .hero-stats { position: absolute; bottom: 0; left: 0; right: 0; z-index: 3; background: rgba(43,43,43,.8); backdrop-filter: blur(8px); border-top: 1px solid var(--line); }
     .stats-inner { display: flex; gap: 2rem; flex-wrap: wrap; padding: 1.1rem 0; align-items: center; }
     .stat-divider { width: 1px; height: 28px; background: var(--line); flex-shrink: 0; }
-    .stat-num { font-size: 1.6rem; font-weight: 900; color: var(--accent); line-height: 1; letter-spacing: -.02em; }
+    .stat-num { font-family: var(--serif); font-size: 1.6rem; font-weight: 400; color: var(--accent); line-height: 1; letter-spacing: -.02em; }
     .stat-label { font-size: .67rem; color: var(--muted); margin-top: .22rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
     @media (max-width: 640px) { .stats-inner { gap: 1rem; } .stat-divider { display: none; } }
 
@@ -189,27 +196,27 @@
     .svc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .3s ease; }
     .svc-card:hover { background: var(--panel-2); }
     .svc-card:hover::before { transform: scaleX(1); }
-    .svc-num { font-family: 'Playfair Display', serif; font-size: 2.6rem; font-weight: 700; color: rgba(42,180,165,.09); line-height: 1; margin-bottom: .75rem; display: block; }
-    .svc-icon { font-size: 1.45rem; margin-bottom: .85rem; display: block; }
-    .svc-card h3 { font-weight: 900; font-size: .95rem; margin: 0 0 9px; letter-spacing: .03em; text-transform: uppercase; }
+    .svc-num { font-family: var(--serif); font-size: 2.6rem; font-weight: 400; color: rgba(62,73,41,.28); line-height: 1; margin-bottom: .75rem; display: block; }
+    .svc-icon { width: 34px; height: 24px; margin-bottom: .95rem; display: block; }
+    .svc-card h3 { font-weight: 700; font-size: 1.1rem; margin: 0 0 9px; }
     .svc-card p { color: var(--muted); font-size: .87rem; line-height: 1.72; margin: 0; }
 
     /* ── GALLERY ── */
     .gallery-loading { display: flex; align-items: center; gap: .75rem; padding: 2.5rem 0; color: var(--muted); font-size: .9rem; font-weight: 700; }
-    .spinner { width: 20px; height: 20px; border: 2px solid rgba(42,180,165,.2); border-top-color: var(--accent); border-radius: 50%; animation: spin .7s linear infinite; flex-shrink: 0; }
+    .spinner { width: 20px; height: 20px; border: 2px solid rgba(62,73,41,.2); border-top-color: var(--accent); border-radius: 50%; animation: spin .7s linear infinite; flex-shrink: 0; }
     @keyframes spin { to { transform: rotate(360deg); } }
     #gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-top: 1.2rem; }
-    .gallery-item { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: var(--panel); border: 1px solid var(--line); cursor: pointer; box-shadow: 0 6px 22px rgba(0,0,0,.28); transition: transform .2s, box-shadow .2s; }
-    .gallery-item:hover { transform: translateY(-3px); box-shadow: 0 12px 34px rgba(0,0,0,.42); }
+    .gallery-item { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; background: var(--panel); border: 1px solid var(--line); cursor: pointer; box-shadow: none; transition: transform .2s, box-shadow .2s; }
+    .gallery-item:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(43,43,43,.2); }
     .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s; }
     .gallery-item:hover img { transform: scale(1.05); }
-    .gallery-item .overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.5) 0%, transparent 60%); opacity: 0; transition: opacity .25s; display: flex; align-items: flex-end; padding: 1rem; }
+    .gallery-item .overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(43,43,43,.6) 0%, transparent 60%); opacity: 0; transition: opacity .25s; display: flex; align-items: flex-end; padding: 1rem; }
     .gallery-item:hover .overlay { opacity: 1; }
-    .gallery-item .overlay span { color: rgba(255,255,255,.9); font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .gallery-item .overlay span { color: var(--brand-cream); font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
     #gallery-empty { display: none; text-align: center; padding: 4rem 0; color: var(--muted); }
     #gallery-empty p { font-size: .9rem; margin-top: .5rem; }
 
-    #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.92); backdrop-filter: blur(6px); z-index: 500; place-items: center; cursor: pointer; }
+    #lightbox { display: none; position: fixed; inset: 0; background: rgba(43,43,43,.95); backdrop-filter: blur(6px); z-index: 500; place-items: center; cursor: pointer; }
     #lightbox.active { display: grid; }
     #lightbox-img { max-width: 90vw; max-height: 88vh; border-radius: 12px; box-shadow: 0 32px 100px rgba(0,0,0,.7); pointer-events: none; }
     #lightbox-close { position: fixed; top: 1.2rem; right: 1.4rem; z-index: 501; color: rgba(255,255,255,.7); cursor: pointer; background: rgba(0,0,0,.45); border: 1px solid rgba(255,255,255,.15); border-radius: 999px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: color .15s, background .15s; }
@@ -227,14 +234,16 @@
     .cred-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); margin-top: .55rem; flex-shrink: 0; }
     .cred-txt { font-size: .82rem; font-weight: 600; line-height: 1.5; color: var(--ink); }
     .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
-    .a-stat { background: rgba(42,180,165,.06); border: 1px solid rgba(42,180,165,.14); border-radius: 14px; padding: 1.2rem; text-align: center; }
-    .a-stat-num { font-size: 1.7rem; font-weight: 900; color: var(--accent); line-height: 1; }
+    .a-stat { background: var(--panel); border: 1px solid transparent; border-radius: var(--radius); padding: 1.2rem; text-align: center; }
+    .a-stat-num { font-family: var(--serif); font-size: 1.9rem; font-weight: 400; color: var(--accent); line-height: 1; }
     .a-stat-lbl { font-size: .68rem; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: .07em; margin-top: .28rem; }
 
     /* ── CTA BAND ── */
-    .cta-band { background: var(--panel); margin: 60px 0 0; padding: 3.5rem 4rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .cta-band { background: var(--brand-green); --accent: var(--brand-gold); --muted: rgba(238,229,208,.8); --ink: var(--brand-cream); --cta: var(--brand-cream); --cta-ink: var(--brand-green); border-radius: var(--radius); margin: 60px 0 0; padding: 3.5rem 4rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
     @media (max-width: 680px) { .cta-band { padding: 2.5rem; flex-direction: column; align-items: stretch; } }
-    .cta-band h3 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 0; color: #fff; line-height: 1.1; }
+    .cta-band h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.3rem); margin: 0; color: var(--brand-cream); line-height: 1.15; }
+    .cta-band .eyebrow { color: var(--brand-cream); }
+    .cta-band .eyebrow::before { background: var(--brand-gold); }
     .cta-band p { margin: .5rem 0 0; color: var(--muted); font-size: .88rem; }
     .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
@@ -242,34 +251,33 @@
     #contact { padding: 72px 0 80px; }
     .contact-shell { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; max-width: 780px; }
     .contact-head { padding: 2rem 2rem 0; }
-    .contact-head h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); margin: 0 0 .5rem; color: #fff; }
+    .contact-head h2 { font-family: var(--sans); font-weight: 700; font-size: 1.35rem; margin: 0 0 .5rem; color: var(--ink); }
     .contact-head p { color: var(--muted); font-size: .9rem; line-height: 1.75; }
     form { padding: 1.6rem 2rem 2rem; }
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.2rem; }
     @media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } .contact-head { padding: 1.6rem 1.4rem 0; } form { padding: 1.4rem 1.4rem 1.8rem; } }
-    label { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.55); margin-bottom: .5rem; }
-    input, textarea { width: 100%; background: rgba(0,0,0,.3); border: 1px solid var(--line); border-radius: 10px; color: var(--ink); padding: .85rem 1rem; font: inherit; font-size: .9rem; outline: none; transition: border-color .15s, box-shadow .15s; }
-    input::placeholder, textarea::placeholder { color: rgba(255,255,255,.2); }
+    label { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .5rem; }
+    input, textarea { width: 100%; background: #fff; border: 1px solid rgba(43,43,43,.25); border-radius: 4px; color: var(--ink); padding: .85rem 1rem; font: inherit; font-size: .9rem; outline: none; transition: border-color .15s, box-shadow .15s; }
+    input::placeholder, textarea::placeholder { color: rgba(43,43,43,.45); }
     textarea { min-height: 140px; resize: vertical; }
-    input:focus, textarea:focus { border-color: rgba(42,180,165,.5); box-shadow: 0 0 0 3px rgba(42,180,165,.1); }
+    input:focus, textarea:focus { border-color: var(--brand-green); box-shadow: 0 0 0 3px rgba(62,73,41,.15); }
     .helper { font-size: .8rem; color: var(--muted); margin-top: .45rem; }
     .form-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.4rem; }
     .status { display: none; margin-top: 1rem; font-size: .88rem; font-weight: 700; }
     .status.show { display: block; }
-    .status.ok { color: rgba(80,220,140,.9); }
-    .status.err { color: rgba(255,140,140,.9); }
+    .status.ok { color: var(--brand-green); }
+    .status.err { color: var(--brand-rust); }
 
     /* ── FOOTER ── */
-    .site-footer { background: #040a0e; color: var(--muted); padding: 48px 0 36px; border-top: 1px solid var(--line); margin-top: 80px; font-size: .88rem; }
+    .site-footer { background: var(--brand-green); --muted: rgba(238,229,208,.78); --ink: var(--brand-cream); --accent: var(--brand-gold); --line: rgba(238,229,208,.18); color: var(--muted); padding: 48px 0 36px; border-top: 1px solid var(--line); margin-top: 80px; font-size: .88rem; }
     .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--line); }
-    .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--ink); margin-bottom: .4rem; }
-    .footer-brand span { color: var(--accent); }
+    .footer-brand { margin-bottom: .9rem; }
     .footer-tagline { font-size: .7rem; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; }
     .footer-links { display: flex; flex-direction: column; gap: .4rem; text-align: right; }
     .footer-links a { color: var(--muted); transition: color .15s; }
     .footer-links a:hover { color: var(--accent); }
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .footer-copy { font-size: .76rem; color: rgba(255,255,255,.2); }
+    .footer-copy { font-size: .76rem; color: rgba(238,229,208,.6); }
 
     /* ── SCROLL REVEAL ── */
     .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
@@ -291,8 +299,7 @@
   <header class="site-header" id="siteHeader">
     <div class="inner">
       <a href="#top" class="brand" aria-label="Aqua Design Collective home">
-        <div class="brand-mark">ADC</div>
-        <span class="brand-text">Aqua Design Collective</span>
+        <img class="logo" src="assets/adc-logo.png" alt="aqua design collective" width="500" height="240">
       </a>
       <nav class="site-nav" aria-label="Main">
         <ul>
@@ -300,7 +307,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+          <li><a href="#contact" class="nav-cta">Request a Studio Tour</a></li>
         </ul>
       </nav>
       <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
@@ -311,7 +318,7 @@
 
   <aside id="mobileDrawer" class="drawer" aria-hidden="true" role="dialog" aria-modal="true">
     <header>
-      <div class="brand-mark">ADC</div>
+      <img class="logo" src="assets/adc-logo.png" alt="aqua design collective" width="500" height="240">
       <button id="closeDrawer" class="menu-toggle" aria-label="Close menu">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
@@ -322,7 +329,7 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#contact">Get a Quote</a></li>
+        <li><a href="#contact">Request a Studio Tour</a></li>
       </ul>
     </nav>
   </aside>
@@ -331,31 +338,31 @@
 
     <!-- ── HERO ── -->
     <section class="hero" id="top" aria-label="Hero">
-      <div style="position:absolute;inset:0;z-index:0;background:linear-gradient(155deg,#060e14 0%,#0a1a26 60%,#060e14 100%);" aria-hidden="true"></div>
+      <div style="position:absolute;inset:0;z-index:0;background:#3e4929;" aria-hidden="true"></div>
       <div class="hero-bg" id="bgA" aria-hidden="true"></div>
       <div class="hero-bg" id="bgB" aria-hidden="true"></div>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="container">
         <div class="hero-inner">
           <div class="hero-left">
-            <div class="eyebrow">Pittsburgh Aquascape Design &amp; Care</div>
-            <h1>Modern aquascapes<br>that match your <em>aesthetic.</em></h1>
+            <div class="eyebrow">Nature Aquariums &middot; Pittsburgh</div>
+            <h1>Custom aquascapes<br>designed for <em>your space.</em></h1>
             <p class="hero-sub">Premium planted aquariums for offices, hospitality, and homes — clean lines, calm movement, and maintenance that keeps everything looking intentional.</p>
             <div class="hero-actions">
               <a href="#gallery" class="btn">See Our Work</a>
-              <a href="#contact" class="btn btn-ghost">Get a Quote</a>
+              <a href="#contact" class="btn btn-ghost">Request a Studio Tour</a>
             </div>
             <div class="hero-proof">
               <div class="hero-stars">&#9679; Available for new projects</div>
               <div class="hero-proof-text">
-                <strong>48-hour quote turnaround</strong><br>
+                <strong>48-hour response</strong><br>
                 Custom builds &amp; full maintenance included
               </div>
             </div>
           </div>
           <div class="hero-right" aria-hidden="true">
             <div class="h-stat"><div class="h-stat-num">100%</div><div class="h-stat-label">Custom Builds</div></div>
-            <div class="h-stat"><div class="h-stat-num">48hr</div><div class="h-stat-label">Quote Turnaround</div></div>
+            <div class="h-stat"><div class="h-stat-num">48hr</div><div class="h-stat-label">Response Time</div></div>
             <div class="h-stat"><div class="h-stat-num">Full</div><div class="h-stat-label">Maintenance Incl.</div></div>
           </div>
         </div>
@@ -365,7 +372,7 @@
           <div class="stats-inner">
             <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Custom</div></div>
             <div class="stat-divider"></div>
-            <div class="stat"><div class="stat-num">48hr</div><div class="stat-label">Quote</div></div>
+            <div class="stat"><div class="stat-num">48hr</div><div class="stat-label">Response</div></div>
             <div class="stat-divider"></div>
             <div class="stat"><div class="stat-num">Full</div><div class="stat-label">Maintenance</div></div>
             <div class="stat-divider"></div>
@@ -381,25 +388,25 @@
         <div class="services-wrap">
           <div class="services-intro">
             <div class="eyebrow">What We Offer</div>
-            <h2 id="svc-h" style="font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.6rem);margin:0;color:#fff;line-height:1.08">Premium<br>Offerings.</h2>
+            <h2 id="svc-h" style="font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,4vw,2.6rem);margin:0;color:var(--accent);line-height:1.12">Premium<br>Offerings.</h2>
             <p>Simple, premium services built around your space and maintained to stay beautiful.</p>
           </div>
           <div class="svc-grid">
             <div class="svc-card reveal reveal-d1">
               <span class="svc-num">01</span>
-              <span class="svc-icon">🪨</span>
+              <svg class="svc-icon" viewBox="0 0 34 24" aria-hidden="true"><path fill="#964c22" d="M1 1h8l.4 22H.6zM13 .6l8 .4-.3 22h-8zM25 1h8.2l-.4 22H24.6z"/></svg>
               <h3>Aquascape Rentals</h3>
               <p>Ready-to-place planted tanks for lobbies, offices, and residences — delivered, placed, and tuned for the room.</p>
             </div>
             <div class="svc-card reveal reveal-d2">
               <span class="svc-num">02</span>
-              <span class="svc-icon">🎨</span>
+              <svg class="svc-icon" viewBox="0 0 34 24" aria-hidden="true"><path fill="#9eaf93" d="M0 2l14 6 19-7 1 22-19-6L1 23z"/></svg>
               <h3>Custom Design &amp; Install</h3>
               <p>From concept to final styling: tank selection, hardscape, planting, lighting, filtration, and placement.</p>
             </div>
             <div class="svc-card reveal reveal-d1">
               <span class="svc-num">03</span>
-              <span class="svc-icon">🌿</span>
+              <svg class="svc-icon" viewBox="0 0 34 24" aria-hidden="true"><path fill="none" stroke="#caab64" stroke-width="4" d="M17 0v13M17 13L5 8M17 13l12-6M17 13L9 24M17 13l9 10"/></svg>
               <h3>Maintenance</h3>
               <p>Consistent care that protects the look: water quality, trimming, algae control, and system optimization.</p>
             </div>
@@ -412,7 +419,7 @@
     <section id="gallery" class="sec" aria-labelledby="gallery-h" style="padding-bottom:72px">
       <div class="container">
         <div class="eyebrow">Our Work</div>
-        <h2 id="gallery-h" style="font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.6rem);margin:0 0 8px;color:#fff;line-height:1.08">Gallery</h2>
+        <h2 id="gallery-h" style="font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,4vw,2.6rem);margin:0 0 8px;color:var(--accent);line-height:1.12">Gallery</h2>
         <p style="color:var(--muted);margin:0;line-height:1.7">A look at our builds — from planted office installations to custom residential tanks.</p>
         <div id="gallery-loading" class="gallery-loading" aria-live="polite">
           <div class="spinner" role="status" aria-label="Loading photos"></div>
@@ -420,7 +427,7 @@
         </div>
         <div id="gallery-grid" aria-label="Photo gallery"></div>
         <div id="gallery-empty">
-          <div style="font-size:2rem">🌊</div>
+          
           <p>Photos coming soon.</p>
         </div>
       </div>
@@ -435,7 +442,7 @@
     <section id="about" style="padding:72px 0 60px" class="reveal" aria-labelledby="about-h">
       <div class="container">
         <div class="eyebrow">About</div>
-        <h2 id="about-h" style="font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.6rem);margin:0 0 2rem;color:#fff;line-height:1.08">Built by someone who<br>understands systems.</h2>
+        <h2 id="about-h" style="font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,4vw,2.6rem);margin:0 0 2rem;color:var(--accent);line-height:1.12">Built by someone who<br>understands systems.</h2>
         <div class="about-layout">
           <div>
             <div class="about-text">
@@ -444,7 +451,7 @@
               <p>Based in Pittsburgh, he serves offices, hospitality spaces, and homes across the region.</p>
               <div class="about-creds">
                 <div class="cred"><div class="cred-dot"></div><div class="cred-txt">100% Custom Builds</div></div>
-                <div class="cred"><div class="cred-dot"></div><div class="cred-txt">48hr Quote Turnaround</div></div>
+                <div class="cred"><div class="cred-dot"></div><div class="cred-txt">48hr Response Time</div></div>
                 <div class="cred"><div class="cred-dot"></div><div class="cred-txt">Full Maintenance Included</div></div>
                 <div class="cred"><div class="cred-dot"></div><div class="cred-txt">Pittsburgh Based</div></div>
               </div>
@@ -452,7 +459,7 @@
           </div>
           <div class="about-stats">
             <div class="a-stat"><div class="a-stat-num">100%</div><div class="a-stat-lbl">Custom</div></div>
-            <div class="a-stat"><div class="a-stat-num">48hr</div><div class="a-stat-lbl">Quote</div></div>
+            <div class="a-stat"><div class="a-stat-num">48hr</div><div class="a-stat-lbl">Response</div></div>
             <div class="a-stat"><div class="a-stat-num">Full</div><div class="a-stat-lbl">Maintenance</div></div>
             <div class="a-stat"><div class="a-stat-num">PGH</div><div class="a-stat-lbl">Based</div></div>
           </div>
@@ -465,11 +472,11 @@
       <div class="cta-band reveal">
         <div>
           <div class="eyebrow">Ready?</div>
-          <h3>Let's build something <em style="font-style:italic;color:var(--accent)">worth looking at.</em></h3>
+          <h3>Let's design something <span style="color:var(--accent)">your people will love</span></h3>
           <p>Free consultations · 48-hour response · Pittsburgh &amp; surrounding areas</p>
         </div>
         <div class="cta-actions">
-          <a href="#contact" class="btn">Get a Free Quote</a>
+          <a href="#contact" class="btn">Request a Studio Tour</a>
         </div>
       </div>
     </div>
@@ -478,11 +485,11 @@
     <section id="contact" style="padding:72px 0 80px" aria-labelledby="contact-h">
       <div class="container">
         <div class="eyebrow">Contact</div>
-        <h2 id="contact-h" style="font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.6rem);margin:0 0 10px;color:#fff;line-height:1.08">Get in Touch</h2>
+        <h2 id="contact-h" style="font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,4vw,2.6rem);margin:0 0 10px;color:var(--accent);line-height:1.12">Get in Touch</h2>
         <p style="color:var(--muted);margin:0 0 2rem;line-height:1.7">Leave your contact email and a short note about your space. We'll respond within 48 hours.</p>
         <div class="contact-shell">
           <div class="contact-head">
-            <h2>Request a Quote</h2>
+            <h2>Request a Studio Tour</h2>
             <p>Tell us about your space and we'll follow up within 48 hours.</p>
           </div>
           <form id="inquiryForm" action="https://formspree.io/f/mbdkrzrj" method="POST" novalidate>
@@ -515,8 +522,8 @@
     <div class="container">
       <div class="footer-top">
         <div>
-          <div class="footer-brand">Aqua Design <span>Collective</span></div>
-          <div class="footer-tagline">Aquascape Design · Rentals · Care</div>
+          <div class="footer-brand"><img class="logo" src="assets/adc-logo-light.png" alt="aqua design collective" width="500" height="240"></div>
+          <div class="footer-tagline">Nature Aquariums · Design · Rentals · Care</div>
         </div>
         <nav class="footer-links" aria-label="Footer">
           <a href="#services">Services</a>
